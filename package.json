@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-uniapp-pages-workspace",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "基于Uniapp扩展功能的Vite插件工作空间",
   "scripts": {
