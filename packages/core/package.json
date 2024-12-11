@@ -1,6 +1,6 @@
 {
   "name": "@twoke/vite-plugin-uniapp-pages",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Uniapp扩展pages.json配置功能的Vite插件",
   "type": "module",
   "keywords": [
