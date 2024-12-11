@@ -338,7 +338,6 @@ export class UniAppPagesContext {
     DEBUG.pages("_loadedPagePath %O", this._loadedPagePath, relativePath)
     if(!this._loadedPagePath.includes(relativePath)) return
     const sfc = await parseSFC(code)
-    DEBUG.pages("进来了 %s", id)
     const block = sfc.script || sfc.scriptSetup  || { content: '' }
     if (!block || !block.content) return
     let changed = false;
