@@ -1,0 +1,28 @@
+{
+  "name": "vite-plugin-uniapp-pages-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "基于Uniapp扩展功能的Vite插件工作空间",
+  "scripts": {
+    "build": "pnpm -F vite-plugin-uniapp-pages build",
+    "dev": "pnpm -F vite-plugin-uniapp-pages stub",
+    "playWithdev": "pnpm dev & pnpm play",
+    "play": "node ./scripts/play.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.11.2",
+    "@types/node": "^22.10.1",
+    "@vue/compiler-sfc": "^3.5.13",
+    "bumpp": "^9.9.0",
+    "fast-glob": "^3.3.2",
+    "inquirer": "^12.2.0",
+    "json5": "^2.2.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.2",
+    "unbuild": "^2.0.0",
+    "vitest": "^2.1.8"
+  }
+}

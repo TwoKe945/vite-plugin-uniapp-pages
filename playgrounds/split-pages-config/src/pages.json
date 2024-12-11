@@ -1,0 +1,62 @@
+{
+  "pages": [
+    {
+      "path": "pages/index",
+      "style": {
+        "navigationBarTitleText": "首页222"
+      }
+    },
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#8f60df",
+    "backgroundColor": "#F8F8F8",
+    "app-plus": {
+      "pullToRefresh": {
+        "style": "circle",
+        "color": "#8f60df"
+      },
+      "bounce": "none"
+    }
+  },
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
+  },
+  "tabBar": {
+    "color": "#8f60df",
+    "selectedColor": "#8f60df",
+    "backgroundColor": "#fafafa",
+    "list": [
+      {
+        "pagePath": "pages/index",
+        "text": "首页222"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "sub-pages",
+      "pages": [
+        {
+          "path": "main/index",
+          "style": {
+            "navigationBarTitleText": "admin"
+          }
+        }
+      ]
+    }
+  ]
+}
