@@ -1,4 +1,4 @@
-# vite-plugin-uniapp-pages
+# @twoke/vite-plugin-uniapp-pages
 
 
 本项目基于 [@uni-helper/vite-plugin-uni-pages](https://www.npmjs.com/package/@uni-helper/vite-plugin-uni-pages)
@@ -6,7 +6,7 @@
 ## 安装
 
 ```
-pnpm add -D vite-plugin-uniapp-pages
+pnpm add -D @twoke/vite-plugin-uniapp-pages
 ```
 
 ## 使用
@@ -15,7 +15,7 @@ pnpm add -D vite-plugin-uniapp-pages
 // vite.config.ts
 import { defineConfig } from 'vite'
 import Uni from '@dcloudio/vite-plugin-uni'
-import UniAppPages from 'vite-plugin-uniapp-pages'
+import UniAppPages from '@twoke/vite-plugin-uniapp-pages'
 
 // It is recommended to put it in front of Uni
 export default defineConfig({
@@ -27,7 +27,7 @@ export default defineConfig({
 
 ```ts
 // pages.config.ts
-import { defineUniPages } from 'vite-plugin-uniapp-pages'
+import { defineUniPages } from '@twoke/vite-plugin-uniapp-pages'
 
 export default defineUniPages({
   // pages配置vue页面配置优先级更高
