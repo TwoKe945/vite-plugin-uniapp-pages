@@ -1,4 +1,4 @@
-import { defineUniPages } from 'vite-plugin-uniapp-pages'
+import { defineUniPages } from '@twoke/vite-plugin-uniapp-pages'
 
 export default defineUniPages({
   "pages": [

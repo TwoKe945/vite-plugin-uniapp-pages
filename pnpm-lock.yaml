@@ -157,6 +157,9 @@ importers:
       '@dcloudio/vite-plugin-uni':
         specifier: 3.0.0-4030620241128001
         version: 3.0.0-4030620241128001(postcss@8.4.49)(rollup@4.28.1)(vite@5.2.8(@types/node@22.10.1)(terser@5.37.0))(vue@3.5.13(typescript@4.9.5))
+      '@twoke/vite-plugin-uniapp-pages':
+        specifier: workspace:*
+        version: link:../../packages/core
       '@vue/compiler-sfc':
         specifier: ^3.5.13
         version: 3.5.13
@@ -172,9 +175,6 @@ importers:
       vite:
         specifier: 5.2.8
         version: 5.2.8(@types/node@22.10.1)(terser@5.37.0)
-      vite-plugin-uniapp-pages:
-        specifier: workspace:*
-        version: link:../../packages/core
       vue-tsc:
         specifier: ^1.0.24
         version: 1.8.27(typescript@4.9.5)

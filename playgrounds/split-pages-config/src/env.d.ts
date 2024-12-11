@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-/// <reference types="vite-plugin-uniapp-pages/client" />
+/// <reference types="@twoke/vite-plugin-uniapp-pages/client" />
 
 declare module '*.vue' {
   import { DefineComponent } from 'vue'

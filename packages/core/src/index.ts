@@ -1,5 +1,5 @@
 import type { Plugin, ResolvedConfig } from 'vite'
-import { VITE_PLUGIN_NAME } from './constants'
+import { DEBUG, VITE_PLUGIN_NAME } from './constants'
 import { UniAppPagesOptions } from './types'
 import { UniAppPagesContext } from './context'
 import { createLogger } from 'vite'
@@ -63,8 +63,8 @@ export function UniAppPages(options?: UniAppPagesOptions) {
       ctx.setupViteServer(server)
     },
 
-    transform(code, id, options) {
-      return ctx.transform(code, id, options)
+    async transform(code, id, options) {
+      return await ctx.transform(code, id, options)
     },
 
   } as Plugin<any>

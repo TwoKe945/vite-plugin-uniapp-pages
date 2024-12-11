@@ -335,8 +335,10 @@ export class UniAppPagesContext {
   async transform(code: string, id: string, options: { ssr?: boolean } | undefined) {
     if (!isTargetFile(id)) return
     const relativePath =  slash(path.relative(slash(path.join(this.options.root, this.options.outDir)), id))
+    DEBUG.pages("_loadedPagePath %O", this._loadedPagePath, relativePath)
     if(!this._loadedPagePath.includes(relativePath)) return
     const sfc = await parseSFC(code)
+    DEBUG.pages("进来了 %s", id)
     const block = sfc.script || sfc.scriptSetup  || { content: '' }
     if (!block || !block.content) return
     let changed = false;
@@ -375,7 +377,6 @@ export class UniAppPagesContext {
       }
     }
     cleanCache()
-    this._loadedPagePath = []
     this._tabBar.clear();
     checkPagesJsonFile(this.options.pagesJsonPath)
 
@@ -408,15 +409,7 @@ export class UniAppPagesContext {
       data.tabBar!.list = mergeTabBarList(data.tabBar?.list || [] as any, this._tabBar);
     }
     const newPagesJson = JSON.stringify(data, null, 2)
-    if (latestPagesJson == newPagesJson)
-    {
-      DEBUG.pages('PagesJson Not have change')
-      return false
-    }
-    this.generateDeclaration()
-    latestPagesJson = newPagesJson;
-    writeFileSync(this.options.pagesJsonPath, newPagesJson)
-
+    this._loadedPagePath = []
     this._pagesPath.forEach(item => {
       this._loadedPagePath.push(item.relativePath)
     })
@@ -425,6 +418,14 @@ export class UniAppPagesContext {
         this._loadedPagePath.push(item.relativePath)
       })
     })
+    if (latestPagesJson == newPagesJson)
+    {
+      DEBUG.pages('PagesJson Not have change')
+      return false
+    }
+    this.generateDeclaration()
+    latestPagesJson = newPagesJson;
+    writeFileSync(this.options.pagesJsonPath, newPagesJson)
     return true
   }
   generateDeclaration() {

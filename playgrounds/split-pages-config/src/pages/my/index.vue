@@ -1,19 +1,17 @@
 <script lang='ts' setup>
 
+
 defineRoute({
   style: {
-    navigationBarTitleText: '首页222'
+    navigationBarTitleText: '个人中心'
   },
-  tabBar: {}
+  tabBar: true
 })
-
-
-
 
 </script>
 
 <template >
-  <view>1234344354</view>
+  <view></view>
 </template>
 
 <style scoped lang='scss'>
