@@ -5,6 +5,16 @@
 
 本项目基于 [@uni-helper/vite-plugin-uni-pages](https://www.npmjs.com/package/@uni-helper/vite-plugin-uni-pages)
 
+在[vite-plugin-uniapp-pages-config](https://www.npmjs.com/package/vite-plugin-uniapp-pages-config)和 [@uni-helper/vite-plugin-uni-pages](https://www.npmjs.com/package/@uni-helper/vite-plugin-uni-pages)的基础上开发了[@twoke/vite-plugin-uniapp-pages](https://www.npmjs.com/package/@twoke/vite-plugin-uniapp-pages)。
+
+该插件主要实现的功能：
+
+ * [x] 新增全局宏定义 defineRoute，使用该宏会动态解析路由信息生成pages.json
+ * [x] 新增pages.config.[ts|mts|cts|cjs|mjs|json]配置全局信息，例如；Tabbar的字体配置，选中样式配置
+ * [x] 新增生成uni-pages.d.ts,在使用ts时，可以提供路由跳转的代码提示，后续会提供常量定义的方式
+ * [ ] 实现vite-plugin-uniapp-pages-config 提供的分文件配置
+
+
 ## 安装
 
 ```
