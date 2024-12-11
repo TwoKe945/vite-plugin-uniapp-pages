@@ -1,5 +1,7 @@
 # @twoke/vite-plugin-uniapp-pages
 
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
 
 本项目基于 [@uni-helper/vite-plugin-uni-pages](https://www.npmjs.com/package/@uni-helper/vite-plugin-uni-pages)
 
@@ -60,3 +62,7 @@ defineRoute({
 </style>
 ```
 
+[npm-version-src]: https://img.shields.io/npm/v/@twoke/vite-plugin-uniapp-pages?style=flat&colorA=080f12&colorB=1fa669
+[npm-version-href]: https://npmjs.com/package/@twoke/vite-plugin-uniapp-pages
+[npm-downloads-src]: https://img.shields.io/npm/dm/@twoke/vite-plugin-uniapp-pages?style=flat&colorA=080f12&colorB=1fa669
+[npm-downloads-href]: https://npmjs.com/package/@twoke/vite-plugin-uniapp-pages
